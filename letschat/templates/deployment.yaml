@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+    tier: {{ .Values.service.tier }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  progressDeadlineSeconds: {{ .Values.progressDeadlineSeconds }}
+  strategy:
+    rollingUpdate:
+      maxSurge: {{ .Values.spec.strategy.rollingUpdate.maxSurge}}
+      maxUnavailable: {{ .Values.spec.strategy.rollingUpdate.maxUnavailable}}
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        tier: {{ .Values.service.tier }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ .Values.service.internalPort }}
+        env:
+        - name: LCB_DATABASE_URI
+          value: mongodb://{{ .Values.mongo.host }}/letschat
+        resources:
+{{ toYaml .Values.resources | indent 10 }}
