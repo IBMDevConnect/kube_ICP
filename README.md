@@ -116,19 +116,20 @@ Execute  ``` bx cs init ```
    http://<your_cluster_ip>:30080
 ```
 
-# letschat App - Group Activity :
+# letschat App - Group Activity
 
-    Lets explore the kubernetes highavailability feature by bringing down pods. lets participants signup to the letschat application and start chatting between them, while they are chatting, we will kill the letschat pods and show the impact and how fast new pod is deployed and available for user to access.
+Lets explore the kubernetes highavailability feature by bringing down pods. lets participants signup to the letschat application and start chatting between them, while they are chatting, we will kill the letschat pods and show the impact and how fast new pod is deployed and available for user to access.
 
-    Before starting this activity, make sure that previous application deployment is complete and letschat application is up and running.
+Before starting this activity, make sure that previous application deployment is complete and letschat application is up and running.
 
 1. Signup to the LetsChat App.
-    a. Access the application using url " http://<your_cluster_ip>:30080".
+Access the application using url " http://<your_cluster_ip>:30080".
 
-    b. Click on "I need account" link.
-    ![](doc/images/login.png)
-    c. Fill the required details, User name and password the click Register button.
-    ![](doc/images/Registration.png)
+Click on "I need account" link.
+![](doc/images/login.png)
+
+Fill the required details, User name and password the click Register button.
+![](doc/images/Registration.png)
 
 2. Login using the credentionals created in step.
 
