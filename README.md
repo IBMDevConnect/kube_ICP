@@ -126,9 +126,11 @@ Before starting this activity, make sure that previous application deployment is
 Access the application using url " http://<your_cluster_ip>:30080".
 
 Click on "I need account" link.
+
 ![](doc/images/login.png)
 
 Fill the required details, User name and password the click Register button.
+
 ![](doc/images/Registration.png)
 
 2. Login using the credentionals created in step.
