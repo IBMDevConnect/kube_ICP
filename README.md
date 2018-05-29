@@ -126,13 +126,13 @@ Before starting this activity, make sure that previous application deployment is
     - Access the application using url " http://<your_cluster_ip>:30080".
     - Click on "I need account" link.
     > ![](doc/images/login.png)
-    - Fill the required details, User name and password the click Register button.
+    - Fill the required details like User name and password then click Register button.
     > ![](doc/images/Registration.png)
 
-2. Login using the credentionals created in step.
+2. Login using the  credentials created in step.
 
 
-3. After successful login, Click on "+" button on top right corner of the page and create Chat Room.
+3. After successful login, Click on "+" button on top right corner of the page to create the Chat Room.
 ![](doc/images/createroom.png)
 
 4. Enter chat room details, Click on save.
