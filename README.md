@@ -12,7 +12,7 @@ Install IBM cloud CLI(bx) :
 https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started
 ```
 
-Install container service  Plugins : 
+Install container service  Plugins :
 ```
 bx plugin install container-service -r Bluemix
 ```
@@ -33,24 +33,24 @@ Install Kubernetes CLI:
 https://kubernetes.io/docs/tasks/tools/install-kubectl/
 ```
 
-Install Helm: 
+Install Helm:
 ```
 https://github.com/kubernetes/helm/blob/master/docs/install.md
 ```
 
 
-# Steps-Helm:
+# Steps-Helm-Deploy letschat App :
 
-1. Install Helm Client 
+1. Install Helm Client
         https://docs.helm.sh/using_helm/#installing-helm
         From Homebrew (macOS)
         Members of the Kubernetes community have contributed a Helm formula build to Homebrew. This formula is generally up to date.
       ```
-        brew install kubernetes-helm 
+        brew install kubernetes-helm
       ```
-        
 
-2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login. 
+
+2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login.
  
 3. After successful login to IBM cloud, Initialize the Container plugin by executing the below command.
 Execute  ``` bx cs init ```
@@ -68,17 +68,17 @@ Execute  ``` bx cs init ```
 
 5. Execute ```bx cs cluster``` to get the list of clusters available in your account. If there is no cluster reported then create one by login to Bluemix console.
  
-6. Execute ```bx cs cluster-config <cluster name>```, 
-   
+6. Execute ```bx cs cluster-config <cluster name>```,
+
    Replace <cluster name >  with your cluster name, received from step 4.1, Output of this command return the cluster name and environment setting need to be execute.
-   
+
    Execute the export command in the output of cluster-config command.
    Example: ``` export KUBECONFIG=/Users/rameshpoomalai/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml ```
 
 7. Execute the following command to initialize the helm service.
 ```helm init```
 
-   
+
 8. Execute the following command to package your charts.
 ```helm package letschat```
    This will package your charts and that be released to release to your repos.
@@ -116,7 +116,42 @@ Execute  ``` bx cs init ```
    http://<your_cluster_ip>:30080
 ```
 
+# letschat App - Group Activity :
+
+    Lets explore the kubernetes highavailability feature by bringing down pods. lets participants signup to the letschat application and start chatting between them, while they are chatting, we will kill the letschat pods and show the impact and how fast new pod is deployed and available for user to access.
+
+    Before starting this activity, make sure that previous application deployment is complete and letschat application is up and running.
+
+1. Signup to the LetsChat App.
+    a. Access the application using url " http://<your_cluster_ip>:30080".
+
+    b. Click on "I need account" link.
+    ![](doc/images/login.png)
+    c. Fill the required details, User name and password the click Register button.
+    ![](doc/images/Registration.png)
+
+2. Login using the credentionals created in step.
 
 
+3. After successful login, Click on "+" button on top right corner of the page and create Chat Room.
+![](doc/images/createroom.png)
 
+4. Enter chat room details, Click on save.
+![](doc/images/createroomDetails.png)
 
+5. Request the Participants to follow the steps 1 & 2 and join the chat room.
+
+![](doc/images/ChatPage.png)
+
+6. Request participants to keep chatting and we will kill the pods in server.
+
+7. execute following commands to kill  pods.
+```
+kubectl get pods -l "app=letschat"
+kubectl delete pod <pod name>
+```
+8. check the pods status now, you will get response with pods, one is in deleting state and one is Running state.
+
+```
+kubectl get pods -l "app=letschat"
+```
