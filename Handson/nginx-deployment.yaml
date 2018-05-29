@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginxdeploy-4
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tier: display
+    spec:
+      containers:
+        - image: nginx
+          name: front-end
+          #image: gcr.io/Pipelines/nginx:1.7.9
+          imagePullPolicy: Always
