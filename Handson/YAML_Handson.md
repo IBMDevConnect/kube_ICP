@@ -280,6 +280,7 @@ You should see the following output:
   kubectl get service -l <<label name>>=<<label value>>
 ```
   e.g. kubectl get service -l app=nginx
+
   You should view the following command:
 ```
   NAME             TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
