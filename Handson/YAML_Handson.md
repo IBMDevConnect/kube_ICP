@@ -2,7 +2,7 @@
 
 This lab is to kick start your journey IBM Container Service, You can find instructions to execute and supporting files in this repo
 
-# Prerequisite for this lab is to have kubernetes cluster on ibm cloud. If you have cluster already ignore this step. The other prerequisites are covered in steps 1-3 below.
+## Prerequisite for this lab is to have kubernetes cluster on ibm cloud. If you have cluster already ignore this step. The other prerequisites are covered in steps 1-3 below.
 
 Create Cluster on IBM cloud: Login with ibm cloud credentials and create service Containers in Kubernetes Clusters from service catalog. Please refer below link.
 https://console.bluemix.net/docs/containers/container_index.html#container_index
