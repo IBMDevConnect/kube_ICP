@@ -50,7 +50,7 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
       ```
 
 
-2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login.
+2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login.(Note: IBM cloud CLI is changed from "bx" to "ibmcloud"  )
  
 3. After successful login to IBM cloud, Initialize the Container plugin by executing the below command.
 Execute  ``` bx cs init ```
@@ -66,7 +66,7 @@ Execute  ``` bx cs init ```
 ```
    Steps 5,6 is required if server version is not printed in step 4
 
-5. Execute ```bx cs cluster``` to get the list of clusters available in your account. If there is no cluster reported then create one by login to Bluemix console.
+5. Execute ```bx cs clusters``` to get the list of clusters available in your account. If there is no cluster reported then create one by login to Bluemix console.
  
 6. Execute ```bx cs cluster-config <cluster name>```,
 
