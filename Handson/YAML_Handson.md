@@ -62,9 +62,10 @@ Get the command to set the environment variable and download the Kubernetes conf
 ```
 
 You should see the following output:
+```
   Client Version: version.Info{Major:"1", Minor:"9", GitVersion:"v1.9.3", GitCommit:"d2835416544f298c919e2ead3be3d0864b52323b", GitTreeState:"clean", BuildDate:"2018-02-07T12:22:21Z", GoVersion:"go1.9.2", Compiler:"gc", Platform:"darwin/amd64"}
   Server Version: version.Info{Major:"1", Minor:"8+", GitVersion:"v1.8.8-2+9d6e0610086578", GitCommit:"9d6e06100865789613cbac936edce948f0710a2f", GitTreeState:"clean", BuildDate:"2018-02-23T08:20:09Z", GoVersion:"go1.8.3", Compiler:"gc", Platform:"linux/amd64"}
-
+```
 
 # Creating a Pod using YAML
   1.	Use the nginx_pod.yaml file for creation of POD. To create the POD, run the following command.
@@ -76,26 +77,25 @@ You should see the following output:
   kubectl create -f nginx_pod.yaml
 ```
   You should view the following output:
-  kubectl create -f nginx_pod.yaml
+```  
   pod "nginx" created
-
+```
   2.	To list the number of PODS, run the following command.
 ```
   kubectl get pods
 ```
   You should view the following output:
-  kubectl get pods
+```
   NAME                        READY     STATUS    RESTARTS   AGE
   nginx                       1/1       Running   0          1m
-
+```
 
   3.	To get more details on the POD, then run the following command.
 ```
   kubectl describe pods nginx
 ```
-
   You should view the following output:
-  kubectl describe pods nginx
+```
   Name:         nginx
   Namespace:    default
   Node:         10.47.122.78/10.47.122.78
@@ -140,7 +140,7 @@ You should see the following output:
     Normal  Pulled                 4m    kubelet, 10.47.122.78  Successfully pulled image "nginx"
     Normal  Created                4m    kubelet, 10.47.122.78  Created container
     Normal  Started                4m    kubelet, 10.47.122.78  Started container
-
+```
   4.	Anything that the application would normally send to STDOUT becomes logs for the container within the Pod.
   We can retrieve these logs using the command:
 ```
@@ -165,25 +165,26 @@ You should see the following output:
   kubectl create –f nginx-service.yaml
 ```
   You should view the following output:
-  kubectl create -f nginx-service.yaml
+```
   service "nginxservice-4" created
-
+```
   2.	To list the number of services, run the following command:
 ```
   kubectl get services
 ```
   You should view the following output:
-  kubectl get services
+```
   NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
   kubernetes       ClusterIP   172.21.0.1       <none>        443/TCP          44d
   nginxservice-4   NodePort    172.21.201.231   <none>        80:30091/TCP     2m
+```
 
   3. To view more details about the service, run the following command:
 ```
   kubectl describe service nginxservice-4
 ```
   You should view the following output:
-  kubectl describe service nginxservice-4
+```
   Name:                     nginxservice-4
   Namespace:                default
   Labels:                   app=nginx
@@ -198,7 +199,7 @@ You should see the following output:
   Session Affinity:         None
   External Traffic Policy:  Cluster
   Events:                   <none>
-
+```
 
 # Creating a Deployment using YAML
 
@@ -207,15 +208,16 @@ You should see the following output:
   kubectl create –f nginx-deployment.yaml
 ```
   You should view the following output:
-  kubectl create -f nginx-deployment.yaml
+```
   deployment "nginxdeploy-4" created
+```
 
   2.	To view more details on the deployment, run the following command:
 ```
   kubectl describe deployment nginxdeploy-4
 ```
   You should view the following output:
-  kubectl describe deployment nginxdeploy-4
+```
   Name:               nginxdeploy-4
   Namespace:          default
   CreationTimestamp:  Mon, 23 Apr 2018 10:42:29 +0530
@@ -246,42 +248,43 @@ You should see the following output:
     Type    Reason             Age   From                   Message
     ----    ------             ----  ----                   -------
     Normal  ScalingReplicaSet  55s   deployment-controller  Scaled up replica set nginxdeploy-4-7db997cfc5 to 1
-
+```
 
   3.	To get the list of deployments, run the following command:
 ```
   kubectl get deployments
 ```
   You should view the following output:
-  kubectl get deployments
+```
   NAME            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
   nginxdeploy-4   1         1         1            1           3m
-
-
+```
 
 # Search the PODS based on Labels
   To retrieve the list of PODS using the labels attached to the PODS, run the following command:
 ```
   kubectl get pods -l <<label name>>=<<label value>>
 ```
-  You should view the following command:
-  kubectl get pods -l app=nginx
+  e.g. kubectl get pods -l app=nginx
+
+  You should view the following output:
+```
   NAME                             READY     STATUS    RESTARTS   AGE
   nginx                            1/1       Running   0          30m
   nginxdeploy-4-7db997cfc5-sg8qk   1/1       Running   0          5m
-
-
+```
 
 # Search the Services based on Labels
   To retrieve the list of Services using the labels attached to the services, run the following command:
 ```
   kubectl get service -l <<label name>>=<<label value>>
 ```
+  e.g. kubectl get service -l app=nginx
   You should view the following command:
-  kubectl get service -l app=nginx
+```
   NAME             TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
   nginxservice-4   NodePort   172.21.201.231   <none>        80:30091/TCP   22m
-
+```
 
 # Some of the kubectl commands for exploration:
 ## Basic Commands (Beginner):
