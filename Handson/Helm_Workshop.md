@@ -39,7 +39,7 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
 ```
 
 
-# Steps-Helm-Deploy letschat App :
+# Steps-Helm-Deploy letschat App : (Note: Clone the kube_ICP before proceeding with the steps below. This labs needs few folders and yaml files to proceed)
 
 1. Install Helm Client
         https://docs.helm.sh/using_helm/#installing-helm
@@ -75,11 +75,11 @@ Execute  ``` bx cs init ```
    Execute the export command in the output of cluster-config command.
    Example: ``` export KUBECONFIG=/Users/rameshpoomalai/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml ```
 
-7. Execute the following command to initialize the helm service.
+7. Execute the following command to initialize the helm service. 
 ```helm init```
 
 
-8. Execute the following command to package your charts.
+8. Execute the following command to package your charts. (Note: Navigate to "handson" folder)
 ```helm package letschat```
    This will package your charts and that be released to release to your repos.
  
