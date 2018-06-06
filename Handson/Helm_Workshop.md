@@ -50,7 +50,7 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
       ```
 
 
-2. Login to IBM cloud, Execute ``` ibmcloud login ``` on your local system terminal window to login.(Note: IBM cloud CLI is changed from "ibmcloud" to "ibmcloud"  )
+2. Login to IBM cloud, Execute ``` ibmcloud login ``` on your local system terminal window to login.(Note: IBM cloud CLI is changed from "bx" to "ibmcloud"  )
  
 3. After successful login to IBM cloud, Initialize the Container plugin by executing the below command.
 Execute  ``` ibmcloud cs init ```
@@ -98,7 +98,13 @@ Execute  ``` ibmcloud cs init ```
 
 14. Execute the following command to get the public IP address.
 ```
-   ibmcloud cs workers <your_cluster_name_created_under_ibm_cloud>
+   
+   
+   
+   
+   
+   
+   cs workers <your_cluster_name_created_under_ibm_cloud>
    The output will be similar to as below. The ip marked i bold is cluster IP in my case.
    ID                                                 Public IP      Private IP
    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
