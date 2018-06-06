@@ -5,16 +5,16 @@ This lab is to kick start your journey IBM Container Service, You can find instr
 # Setting up environment
 Set up IBM Cloud CLI : Command line interface to manage applications, containers, infrastructures, services
 https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started
-verify by using command like bx help
+verify by using command like ibmcloud help
 
-Install IBM cloud CLI(bx) :
+Install IBM cloud CLI(ibmcloud) :
 ```
 https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started
 ```
 
 Install container service  Plugins :
 ```
-bx plugin install container-service -r Bluemix
+ibmcloud plugin install container-service -r Bluemix
 ```
 
 Create Cluster on IBM cloud: Login with ibm cloud credentionals and create service Containers in Kubernetes Clusters from service catalog. Please refer below link.
@@ -50,10 +50,10 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
       ```
 
 
-2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login.(Note: IBM cloud CLI is changed from "bx" to "ibmcloud"  )
+2. Login to IBM cloud, Execute ``` ibmcloud login ``` on your local system terminal window to login.(Note: IBM cloud CLI is changed from "ibmcloud" to "ibmcloud"  )
  
 3. After successful login to IBM cloud, Initialize the Container plugin by executing the below command.
-Execute  ``` bx cs init ```
+Execute  ``` ibmcloud cs init ```
  
 4. Make sure kubectl is installed properly and it can communicate to the cluster.
 
@@ -66,16 +66,16 @@ Execute  ``` bx cs init ```
 ```
    Steps 5,6 is required if server version is not printed in step 4
 
-5. Execute ```bx cs clusters``` to get the list of clusters available in your account. If there is no cluster reported then create one by login to Bluemix console.
+5. Execute ```ibmcloud cs clusters``` to get the list of clusters available in your account. If there is no cluster reported then create one by login to Bluemix console.
  
-6. Execute ```bx cs cluster-config <cluster name>```,
+6. Execute ```ibmcloud cs cluster-config <cluster name>```,
 
    Replace <cluster name >  with your cluster name, received from step 4.1, Output of this command return the cluster name and environment setting need to be execute.
 
    Execute the export command in the output of cluster-config command.
    Example: ``` export KUBECONFIG=/Users/rameshpoomalai/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml ```
 
-7. Execute the following command to initialize the helm service. 
+7. Execute the following command to initialize the helm service.
 ```helm init```
 
 
@@ -98,7 +98,7 @@ Execute  ``` bx cs init ```
 
 14. Execute the following command to get the public IP address.
 ```
-   bx cs workers <your_cluster_name_created_under_ibm_cloud>
+   ibmcloud cs workers <your_cluster_name_created_under_ibm_cloud>
    The output will be similar to as below. The ip marked i bold is cluster IP in my case.
    ID                                                 Public IP      Private IP
    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
