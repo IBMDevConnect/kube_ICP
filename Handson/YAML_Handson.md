@@ -76,10 +76,6 @@ You should see the following output:
   kubectl create -f nginx_pod.yaml
 ```
   You should view the following output:
-```
-  kubectl create -f nginx_pod.yaml
-```
-  You should view the following output:
 ```  
   pod "nginx" created
 ```
