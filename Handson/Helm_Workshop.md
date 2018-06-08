@@ -102,6 +102,7 @@ Execute  ``` ibmcloud cs init ```
 ```
 
    The output will be similar to as below. The ip marked i bold is cluster IP in my case.
+   
    ID                                                 Public IP      Private IP
    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
 
