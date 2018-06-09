@@ -43,10 +43,9 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl/
   ibmcloud login
 ```
 
-### Note: Set the region of your cluster using below command
+### Note: Command to list the clusters available in your account. If there is no cluster reported then create one by login to ibm cloud console.  
 ```
-ibmcloud cs region-set <region name>
-e.g. ibmcloud cs region-set uk-south
+ibmcloud cs clusters
 ```
 
 5. Set the context for the cluster in in your CLI
