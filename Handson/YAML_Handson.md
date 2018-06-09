@@ -51,7 +51,7 @@ ibmcloud cs clusters
 5. Set the context for the cluster in in your CLI
 Get the command to set the environment variable and download the Kubernetes configuration files
 ```
-  ibmcloud cs cluster-config <<cluste-name>>
+  ibmcloud cs cluster-config <<cluster-name>>
 ```
 
 6. Set the KUBECONFIG environment variable. Copy the output from the previous command and paste it in your terminal. The command output should look similar to the following.
