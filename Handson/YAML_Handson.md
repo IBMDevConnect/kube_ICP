@@ -43,6 +43,12 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl/
   ibmcloud login
 ```
 
+### Note: Set the region of your cluster using below command
+```
+ibmcloud cs region-set <region name>
+e.g. ibmcloud cs region-set uk-south
+```
+
 5. Set the context for the cluster in in your CLI
 Get the command to set the environment variable and download the Kubernetes configuration files
 ```
