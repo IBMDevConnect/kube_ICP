@@ -19,7 +19,7 @@ Set up IBM Cloud CLI : Command line interface to manage applications, containers
 verify by using command like ibmcloud help
 
 1. Install IBM cloud CLI(ibmcloud) :
-https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use![https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use]
+https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use 
 
 2. Install and Set Up kubectl: kubectl, a Kubernetes command-line tool, to deploy and manage applications on Kubernetes.
 There are multiple to option to install kubectl.
