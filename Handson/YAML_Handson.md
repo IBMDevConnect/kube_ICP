@@ -22,7 +22,7 @@ verify by using command like ibmcloud help
 
 1. Install IBM cloud CLI(ibmcloud) :
 ```
-https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started
+https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use
 ```
 
 2. Install and Set Up kubectl: kubectl, a Kubernetes command-line tool, to deploy and manage applications on Kubernetes.
