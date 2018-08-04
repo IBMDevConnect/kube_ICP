@@ -9,6 +9,7 @@ Create Cluster on IBM cloud: Login with ibm cloud credentials and create service
 https://console.bluemix.net/docs/containers/container_index.html#container_index
 
 Install Kubernetes Cluster :
+
 https://console.bluemix.net/containers-kubernetes/catalog/cluster/create
 
 # Setting up environment
@@ -23,6 +24,7 @@ https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#instal
 There are multiple to option to install kubectl.
 
 Install Kubernetes CLI:
+
 https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 3. Install container service  Plugins :
